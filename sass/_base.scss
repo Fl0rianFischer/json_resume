@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,700);
+
+// Color variables
+// ===============
+
+$primary: #566071;
+$emphasize: #45AA9B;
+$paper: white;
+$font-primary: black;
+$font-secondary: #9c9c9c;
+
+// Layout variables
+// ================
+
+$default-margin: 8px;
+
+// Base page stylings
+// ==================
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: 'Raleway', sans-serif;
+  color: $font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $primary;
+}
+
+.paper {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 50px;
+  background-color: $paper;
+}
+
+// Type
+// ====
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.italic {
+  font-style: italic; 
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.light {
+  color: $font-secondary;
+}
+
+.fa {
+  color: $emphasize;
+}
+
+$link-animation: all 0.2s ease-in-out 0s;
+$link-border-transform: scaleX(0);
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-bottom: 3px;
+  border-bottom: none;
+
+  &:hover {
+    color: $emphasize;
+    text-decoration: none;
+    -webkit-transition: $link-animation;
+    transition: $link-animation;
+  }
+
+  &:after {
+    content: "\f105";
+    padding-left: 0.5rem;
+    font-family: FontAwesome;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 96%;
+    height: 1px;
+    bottom: 0;
+    left: 2%;
+    background-color: $emphasize;
+    visibility: hidden;
+    -webkit-transform: $link-border-transform;
+    transform: $link-border-transform;
+    -webkit-transition: $link-animation;
+    transition: $link-animation;
+  }
+
+  &:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+// Layout
+// ======
+.mt-lg {
+  margin-top: $default-margin * 8;
+}
+
+.mt-sm {
+  margin-top: $default-margin;
+}
+
+.mb-sm {
+  margin-bottom: $default-margin;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
