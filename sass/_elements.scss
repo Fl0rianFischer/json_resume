@@ -1,0 +1,168 @@
+// Header content
+// ==============
+
+.name {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.description {
+  @extend .italic;
+  font-size: 2rem;
+}
+
+.detail {
+  width: 30%;
+  vertical-align: top;
+  color: $font-secondary;
+  display: inline-block;
+}
+
+.detail-content {
+  @extend .detail;
+  width: 65%;
+  padding-left: 10px;
+  border-left: 1px solid $font-secondary;
+}
+
+// Separated items in resume
+// =========================
+
+.header-title {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid $font-secondary;
+}
+
+.header-icon {
+  @extend h2;
+  margin-top: 8px;
+}
+
+.content {
+  margin-top: $default-margin;
+  padding: $default-margin * 2 0;
+  position: relative;
+}
+
+
+// Timeline element
+// ================
+$timeline-width: 2px;
+
+.timeline {
+  padding-left: 15%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: $timeline-width;
+    background-color: $primary;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: $default-margin * 2 + 5;
+    left: $timeline-width * 3;
+    width: $timeline-width * 5;
+    height: $timeline-width * 5;
+    background-color: $primary;
+    border-radius: 50%;
+  }
+}
+
+// Progress bar element
+// ====================
+$progress-radius: 10px;
+
+.progress {
+  position: relative;
+  height: 20px;
+  border-radius: $progress-radius;
+  background-color: $emphasize-light;
+}
+
+.progress-bar {
+  border-radius: inherit;
+  height: inherit;
+  background-color: $emphasize;
+}
+
+.progress-bar-beginner {
+  width: 25%;
+}
+
+.progress-bar-master {
+  width: 75%;
+}
+
+.progress-bar-yoda {
+  width: 95%;
+}
+
+.progress-bar-label {
+  @extend .label-small;
+  color: $paper;
+  padding-left: 4px;
+  display: table-cell;
+  padding-top: 1px;
+}
+
+// Circular progress bar
+// =====================
+
+$circle-height: 100px;
+
+.circle {
+  height: $circle-height;
+  text-align: center;
+  margin-bottom: $default-margin * 2;
+}
+
+// Reference to https://codepen.io/geedmo/pen/InFfd?editors=1100
+
+.progress-circle {
+  float: left;
+  margin-right: 30px;
+  position: relative;
+  width: $circle-height;
+  height: $circle-height;
+  border-radius: 50%;
+  border: 2px solid $paper;
+  background-color: $emphasize;
+
+  .overlay {
+    position: absolute;
+    width: $circle-height * 0.65;
+    height: $circle-height * 0.65;
+    background-color: $paper;
+    border-radius: 50%;
+    margin-left: $circle-height * 0.15;
+    margin-top: $circle-height * 0.15;
+    text-align: center;
+    line-height: 60px;
+    font-size: 16px;
+  }
+}
+
+$step: 5; // step of % for created classes
+
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+@for $i from 0 through $loops {
+  .progress-circle-#{$i*$step} {
+    @if $i < $half {
+      $nextdeg: 90deg + ( $increment * $i );
+      background-image: linear-gradient(90deg, $emphasize-light 50%, transparent 50%, transparent), linear-gradient($nextdeg, $emphasize 50%, $emphasize-light 50%, $emphasize-light);
+    }
+    @else {
+      $nextdeg: -90deg + ( $increment * ( $i - $half ) );
+      background-image: linear-gradient($nextdeg, $emphasize 50%, transparent 50%, transparent), linear-gradient(270deg, $emphasize 50%, $emphasize-light 50%, $emphasize-light);
+    }
+  }
+}

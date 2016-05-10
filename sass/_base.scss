@@ -5,6 +5,7 @@
 
 $primary: #566071;
 $emphasize: #45AA9B;
+$emphasize-light: lighten($emphasize, 30);
 $paper: white;
 $font-primary: black;
 $font-secondary: #9c9c9c;
@@ -41,7 +42,7 @@ body {
 // Type
 // ====
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
   margin: 0;
 }
 
@@ -59,6 +60,10 @@ h2 {
 
 .light {
   color: $font-secondary;
+}
+
+.label-small {
+  font-size: 1.3rem;
 }
 
 .fa {
