@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>John Doe Resume</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -10,7 +11,7 @@
 <body>
     <section>
         <div class="container paper">
-            <div class="row">
+            <div class="row header">
                 <div class="col-md-4">
                     <h1 class="name">John Doe.</h1>
                     <span class="description">Programmer</span>
@@ -40,7 +41,7 @@
                         </div>
                         <div>
                             <i class="fa fa-desktop" aria-hidden="true"></i>
-                            <span>http://johndoe.com</span>
+                            <a href="http://johndoe.com">http://johndoe.com</a>
                         </div>
                     </div>
                 </div>
@@ -49,93 +50,114 @@
             <div class="row mt-lg">
                 <div class="col-md-6">
                     <div class="row">
-
-                        <div class="item">
-                            <div class="col-xs-1">
-                                <i class="fa fa-briefcase header-icon" aria-hidden="true"></i>
+                        
+                        <div class="col-xs-1">
+                            <i class="fa fa-briefcase header-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-11 col-xxs-12">
+                            <h2 class="header-title">Experience</h2>
+                            <div class="content">
+                                <div class="timeline">
+                                    <div>
+                                        <span class="light">01/01/2013 - 01/01/2014</span>
+                                    </div>
+                                    <div>
+                                        <span class="bold">President</span>
+                                        <span>at Company</span>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                                        <a href="http://company.com">Website</a>
+                                    </div>
+                                    <div class="content-description">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet diam in risus elementum pulvinar. Nunc diam tellus, viverra  euismod posuere varius, tempus a ex. Etiam semper sit amet lorem non tincidunt.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li><span>Highlight 1</span></li>
+                                            <li><span>Highlight 2</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-11">
-                                <h2 class="header-title">Work</h2>
-                                <div class="content">
-                                    <div class="timeline">
-                                        <div>
-                                            <span class="light">01/01/2013 - 01/01/2014</span>
-                                        </div>
-                                        <div>
-                                            <span class="bold">President</span>
-                                            <span>at Company</span>
-                                        </div>
-                                        <div>
-                                            <a href="http://company.com">Website</a>
-                                        </div>
-                                        <div class="mt-sm mb-sm">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet diam in risus elementum pulvinar. Nunc diam tellus, viverra  euismod posuere varius, tempus a ex. Etiam semper sit amet lorem non tincidunt.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <ul>
-                                                <li><span>Highlight 1</span></li>
-                                                <li><span>Highlight 2</span></li>
-                                            </ul>
-                                        </div>
+                            <div class="content">
+                                <div class="timeline">
+                                    <div>
+                                        <span class="light">01/01/2013 - 01/01/2014</span>
+                                    </div>
+                                    <div>
+                                        <span class="bold">Intern</span>
+                                        <span>at Company</span>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                                        <a href="http://company.com">Website</a>
+                                    </div>
+                                    <div class="content-description">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet diam in risus elementum pulvinar. Nunc diam tellus, viverra  euismod posuere varius, tempus a ex. Etiam semper sit amet lorem non tincidunt.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li><span>Highlight 1</span></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="item">
-                            <div class="col-xs-1">
-                                <i class="fa fa-university header-icon" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-11">
-                                <h2 class="header-title">Education</h2>
-                                <div class="content">
-                                    <div class="timeline">
-                                        <div>
-                                            <span class="light">01/01/2011 - 01/01/2013</span>
-                                        </div>
-                                        <div>
-                                            <span>Bachelor of</span>
-                                            <span class="bold">Software Development</span>
-                                            <span>at University</span>
-                                        </div>
-                                        <div>
-                                            <span class="bold">GPA: </span>
-                                            <span>4.0</span>
-                                        </div>
-                                        <div>
-                                            <span class="bold">Courses: </span>
-                                            <span>DB1101 - Basic SQL</span>
-                                        </div>
+                        <div class="col-xs-1">
+                            <i class="fa fa-university header-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-11 col-xxs-12">
+                            <h2 class="header-title">Education</h2>
+                            <div class="content">
+                                <div class="timeline">
+                                    <div>
+                                        <span class="light">01/01/2011 - 01/01/2013</span>
+                                    </div>
+                                    <div>
+                                        <span>Bachelor of</span>
+                                        <span class="bold">Software Development</span>
+                                        <span>at University</span>
+                                    </div>
+                                    <div>
+                                        <span class="bold">GPA: </span>
+                                        <span>4.0</span>
+                                    </div>
+                                    <div>
+                                        <span class="bold">Courses: </span>
+                                        <span>DB1101 - Basic SQL</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="item">
-                            <div class="col-xs-1">
-                                <i class="fa fa-heart header-icon" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-11">
-                                <h2 class="header-title">Volunteering</h2>
-                                <div class="content">
-                                    <div class="timeline">
-                                        <div>
-                                            <span class="light">01/01/2011 - 01/01/2013</span>
-                                        </div>
-                                        <div>
-                                            <span class="bold">Volunteer</span>
-                                            <span>at Organization</span>
-                                        </div>
-                                        <div>
-                                            <a href="http://company.com">Website</a>
-                                        </div>
-                                        <div class="mt-sm mb-sm">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet diam in risus elementum pulvinar. Nunc diam tellus, viverra  euismod posuere varius, tempus a ex. Etiam semper sit amet lorem non tincidunt.
-                                            </p>
-                                        </div>
+                        <div class="col-xs-1">
+                            <i class="fa fa-heart header-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-11 col-xxs-12">
+                            <h2 class="header-title">Volunteering</h2>
+                            <div class="content">
+                                <div class="timeline">
+                                    <div>
+                                        <span class="light">01/01/2011 - 01/01/2013</span>
+                                    </div>
+                                    <div>
+                                        <span class="bold">Volunteer</span>
+                                        <span>at Organization</span>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                                        <a href="http://company.com">Website</a>
+                                    </div>
+                                    <div class="content-description">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet diam in risus elementum pulvinar. Nunc diam tellus, viverra  euismod posuere varius, tempus a ex. Etiam semper sit amet lorem non tincidunt.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +169,7 @@
                         <div class="col-xs-1">
                             <i class="fa fa-file-text-o header-icon" aria-hidden="true"></i>
                         </div>
-                        <div class="col-xs-11">
+                        <div class="col-xs-11 col-xxs-12">
                             <h2 class="header-title">Biography</h2>
                             <div class="content">
                                 <p>
@@ -159,7 +181,7 @@
                         <div class="col-xs-1">
                             <i class="fa fa-bar-chart header-icon" aria-hidden="true"></i>
                         </div>
-                        <div class="col-xs-11">
+                        <div class="col-xs-11 col-xxs-12">
                             <h2 class="header-title">Skills</h2>
                             <div class="content">
                                 <div class="skill row">
@@ -204,11 +226,11 @@
                         <div class="col-xs-1">
                             <i class="fa fa-comments-o header-icon" aria-hidden="true"></i>
                         </div>
-                        <div class="col-xs-11">
+                        <div class="col-xs-11 col-xxs-12">
                             <h2 class="header-title">Languages</h2>
                             <div class="content">
                                 <div class="row">
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-3 col-xs-6">
                                         <div class="circle">
                                             <div class="progress-circle progress-circle-25">
                                                 <div class="overlay">
@@ -218,7 +240,7 @@
                                             <span>German</span>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-3 col-xs-6">
                                         <div class="circle">
                                             <div class="progress-circle progress-circle-90">
                                                 <div class="overlay">
@@ -235,7 +257,7 @@
                         <div class="col-xs-1">
                             <i class="fa fa-trophy header-icon" aria-hidden="true"></i>
                         </div>
-                        <div class="col-xs-11">
+                        <div class="col-xs-11 col-xxs-12">
                             <h2 class="header-title">Awards</h2>
                             <div class="content">
                                 <div>
@@ -244,6 +266,46 @@
                                 <div>
                                     <span class="bold">Award</span>
                                     <span>by Organization</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <i class="fa fa-book header-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-11 col-xxs-12">
+                            <h2 class="header-title">Publications</h2>
+                            <div class="content">
+                                <div>
+                                    <span class="light">01/10/2014</span>
+                                </div>
+                                <div>
+                                    <span class="bold">Publication</span>
+                                    <span>at Company</span>
+                                </div>
+                                <div>
+                                    <a href="http://company.com">Website</a>
+                                </div>
+                                <div class="content-description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet diam in risus elementum pulvinar. Nunc diam tellus, viverra  euismod posuere varius, tempus a ex. Etiam semper sit amet lorem non tincidunt.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <i class="fa fa-thumbs-up header-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-11 col-xxs-12">
+                            <h2 class="header-title">References</h2>
+                            <div class="content">
+                                <div>
+                                    <span class="bold">Jane Doe</span>
+                                </div>
+                                <div class="content-description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet diam in risus elementum pulvinar. Nunc diam tellus, viverra  euismod posuere varius, tempus a ex. Etiam semper sit amet lorem non tincidunt.
+                                    </p>
                                 </div>
                             </div>
                         </div>

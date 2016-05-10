@@ -15,6 +15,38 @@ $font-secondary: #9c9c9c;
 
 $default-margin: 8px;
 
+// Media queries
+// =============
+
+$desktop-sm: 993px;
+$tablet: 768px;
+$mobile-lg: 480px;
+$mobile: 374px;
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media (max-width: #{$mobile-lg}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
 // Base page stylings
 // ==================
 
@@ -37,17 +69,46 @@ body {
   margin-bottom: 100px;
   padding: 50px;
   background-color: $paper;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  @include desktop-sm {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  @include tablet {
+    margin: 10px;
+    padding: 25px;
+  }
+
+  @include mobile-lg {
+    margin: 5px;
+    padding: 25px 10px;
+  }
 }
 
 // Type
 // ====
 
-h1, h2, h3, h4, p {
+h1, h2, p {
   margin: 0;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 1;
+
+  @include desktop-sm {
+    font-size: 4.5rem;
+  }
 }
 
 h2 {
   font-size: 3rem;
+
+  @include mobile-lg {
+    font-size: 2.5rem;
+  }
 }
 
 .italic {
@@ -120,16 +181,11 @@ a {
 
 // Layout
 // ======
-.mt-lg {
-  margin-top: $default-margin * 8;
-}
 
-.mt-sm {
-  margin-top: $default-margin;
-}
-
-.mb-sm {
-  margin-bottom: $default-margin;
+.col-xxs-12 {
+  @include mobile {
+    width: 100%;
+  }
 }
 
 ul {
@@ -139,4 +195,16 @@ ul {
 
 li {
   list-style: none;
+}
+
+.hidden-xs {
+  @include mobile {
+    display: none;
+  }
+}
+
+.hidden-s {
+  @include mobile-lg {
+    display: none;
+  }
 }

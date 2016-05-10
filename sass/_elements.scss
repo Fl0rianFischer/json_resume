@@ -1,9 +1,12 @@
 // Header content
 // ==============
 
-.name {
-  font-size: 6rem;
-  line-height: 1;
+.header {
+  margin-bottom: $default-margin * 6;
+
+  @include mobile-lg {
+    margin-bottom: $default-margin * 3;
+  }
 }
 
 .description {
@@ -16,6 +19,14 @@
   vertical-align: top;
   color: $font-secondary;
   display: inline-block;
+
+  @include desktop-sm {
+    margin-top: $default-margin * 2;
+  }
+
+  @include tablet {
+    width: 20%;
+  }
 }
 
 .detail-content {
@@ -32,6 +43,7 @@
   display: inline-block;
   width: 100%;
   border-bottom: 1px solid $font-secondary;
+  margin-bottom: $default-margin;
 }
 
 .header-icon {
@@ -40,11 +52,22 @@
 }
 
 .content {
-  margin-top: $default-margin;
-  padding: $default-margin * 2 0;
+  padding-bottom: $default-margin * 2.5;
   position: relative;
+
+  &:nth-of-type(1) {
+    padding-top: $default-margin * 2.5;
+  }
+
+  .fa {
+    color: $font-primary;
+  }
 }
 
+.content-description {
+  margin-top: $default-margin;
+  margin-bottom: $default-margin;
+}
 
 // Timeline element
 // ================
@@ -53,7 +76,16 @@ $timeline-width: 2px;
 .timeline {
   padding-left: 15%;
 
+  @include desktop-sm {
+    padding-left: 10%;
+  }
+
+  @include mobile-lg {
+    padding-left: 0;
+  }
+
   &:before {
+    @extend .hidden-s;
     content: '';
     position: absolute;
     top: 0;
@@ -64,9 +96,10 @@ $timeline-width: 2px;
   }
 
   &:after {
+    @extend .hidden-s;
     content: '';
     position: absolute;
-    top: $default-margin * 2 + 5;
+    top: $default-margin * 3 + 5;
     left: $timeline-width * 3;
     width: $timeline-width * 5;
     height: $timeline-width * 5;
@@ -118,12 +151,12 @@ $progress-radius: 10px;
 $circle-height: 100px;
 
 .circle {
-  height: $circle-height;
+  width: $circle-height;
   text-align: center;
   margin-bottom: $default-margin * 2;
 }
 
-// Reference to https://codepen.io/geedmo/pen/InFfd?editors=1100
+// Credits to https://codepen.io/geedmo/pen/InFfd?editors=1100
 
 .progress-circle {
   float: left;
@@ -144,12 +177,11 @@ $circle-height: 100px;
     margin-left: $circle-height * 0.15;
     margin-top: $circle-height * 0.15;
     text-align: center;
-    line-height: 60px;
-    font-size: 16px;
+    line-height: $circle-height * 0.65;
   }
 }
 
-$step: 5; // step of % for created classes
+$step: 5;
 
 $loops: round(100 / $step);
 $increment: 360 / $loops;
