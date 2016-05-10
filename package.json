@@ -1,0 +1,11 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "json resume for john doe",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "author": "Florian Fischer"
+}
